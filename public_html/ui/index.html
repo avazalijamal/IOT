@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="axios.min.js"></script>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <!-- <div class="alert success">✔ İşlem başarıyla tamamlandı.</div> -->
+    <!-- <div class="alert error">✖ Bir hata oluştu!</div> -->
+    <!-- <div class="alert warning">⚠ Dikkat! Bu işlem geri alınamaz.</div> -->
+    <!-- <div class="alert info">ℹ Bilgi: Güncelleme mevcut.</div> -->
+
+    <header>
+      <button id="add_button" class="add-btn">+ Əlavə et</button>
+    </header>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Sethi Suret</th>
+          <th>Orta Suret</th>
+          <th>Tezlik</th>
+          <th>Tarix</th>
+          <th>Redakte</th>
+          <th>Sil</th>
+        </tr>
+      </thead>
+      <tbody id="table_body"></tbody>
+    </table>
+
+    <div id="add_modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Sürət Dəyərləri</h2>
+
+        <form id="insert">
+          <div class="form-group">
+            <label>Səthi sürət</label>
+            <input
+              required
+              name="sethi_suret"
+              type="number"
+              placeholder="məs: 10"
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Orta sürət</label>
+            <input
+              required
+              name="orta_suret"
+              type="number"
+              placeholder="məs: 20"
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Tezlik sürət</label>
+            <input required name="tezlik" type="number" placeholder="məs: 30" />
+          </div>
+
+          <button type="submit">Əlavə Et</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="update_modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Sürət Dəyərləri</h2>
+
+        <form id="update">
+          <div class="form-group">
+            <label>Səthi sürət</label>
+            <input
+              required
+              name="sethi_suret"
+              type="number"
+              placeholder="məs: 10"
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Orta sürət</label>
+            <input
+              required
+              name="orta_suret"
+              type="number"
+              placeholder="məs: 20"
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Tezlik sürət</label>
+            <input required name="tezlik" type="number" placeholder="məs: 30" />
+          </div>
+
+          <button type="submit">Yadda Saxla</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
