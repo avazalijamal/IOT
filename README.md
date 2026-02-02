@@ -292,3 +292,74 @@ void loop() {}
 ---
 
 Hər hansı genişləndirmə (tarix aralığı filtrləri, axtarış, auth, pagination meta və s.) istəsən, mən əlavə edib README-ni də yeniləyə bilərəm.
+
+# 🖥️ UI (Web Panel) --- İstifadəçi İnterfeysi
+
+Bu sənəd `su_suretleri` API-si ilə işləyən veb əsaslı istifadəçi
+interfeysinin (dashboard) quruluşunu və funksiyalarını izah edir. UI
+əsasən məlumatların **vizual izlənməsi**, **əlavə edilməsi**,
+**redaktəsi** və **silinməsi** üçün nəzərdə tutulur.
+
+------------------------------------------------------------------------
+
+## 📊 Dashboard (Ümumi Baxış)
+
+**Təsviri:** - Son ölçmələrin qrafikləri (sethi_suret, orta_suret,
+tezlik)\
+- Son 24 saat / 7 gün / 30 gün filtrləri\
+- Ümumi qeyd sayı və son yenilənmə vaxtı
+
+**Ekran görüntüsü əlavə edin:** docs/images/dashboard.png
+
+------------------------------------------------------------------------
+
+## ➕ Məlumat Əlavə Etmə Formu
+
+**Təsviri:** - Səthi sürət, orta sürət və tezlik üçün input sahələri\
+- "Göndər" düyməsi → POST /api_insert.php\
+- Uğurlu və ya xəta mesajlarının göstərilməsi
+
+**Ekran görüntüsü əlavə edin:** docs/images/insert_form.png
+
+------------------------------------------------------------------------
+
+## 📋 Məlumat Siyahısı (Cədvəl Görünüşü)
+
+**Təsviri:** - ID, sethi_suret, orta_suret, tezlik, tarix sütunları\
+- Axtarış, sıralama (ASC/DESC), səhifələmə (pagination)\
+- Hər sətirdə Edit və Delete düymələri
+
+![Dashboard](/presentation/home.png)
+
+------------------------------------------------------------------------
+
+## ✏️ Yeniləmə və Silmə Pəncərələri
+
+**Təsviri:** - Edit → PATCH /api_update.php\
+- Delete → DELETE /api_delete.php\
+- Təsdiq (confirmation) pəncərəsi
+
+![Dashboard](/presentation/insert.png)
+
+------------------------------------------------------------------------
+
+## 🔐 UI üçün Tövsiyələr
+
+-   UI yalnız HTTPS üzərindən işləsin\
+-   Lazım gələrsə login sistemi əlavə edilsin\
+-   API token istifadə olunarsa, UI header-lara avtomatik əlavə etsin
+
+------------------------------------------------------------------------
+
+## 📁 Tövsiyə edilən qovluq strukturu
+
+/docs\
+/images\
+dashboard.png\
+insert_form.png\
+table_view.png\
+edit_modal.png\
+delete_confirm.png
+
+UI.md
+
